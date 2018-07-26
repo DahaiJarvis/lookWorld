@@ -4,7 +4,7 @@
       <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-xs-12 col-sm-9">
           <ul class="smart-artiles" id="articleList">
-            <li v-for="item in lists">
+            <li v-for="item in list">
               <div class="point">+{{item.hits}}</div>
               <div class="card">
                 <h2><a :href="item.url" target="_blank">{{item.title}}</a></h2>
@@ -36,11 +36,12 @@
     </div>
   </Layout>
 </template>
-<style>
-  @import "index.css";
+<style lang="less">
+  @import "index.less";
 </style>
 <script type="text/babel">
   import { formatDate } from 'framework/utils/utils.js';
+  
   export default {
     components: {
 
